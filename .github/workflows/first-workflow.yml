@@ -1,16 +1,19 @@
-name: my first github action file
-on : 
-  push:
-  workflow_dispatch:
+name: My First GitHub Action
+
+# When to run this workflow
+on: 
+  push:              # Runs whenever you push code
+  workflow_dispatch: # Runs manually
 
 jobs:
-  first-jobs:
-    runs-on: ubantu_latest
-    
-steps:
-   - name: Print welcome message
-     run: echo "Hello! This is my first GitHub Actions workflow."
+  first-job:
+    runs-on: ubuntu-latest
 
-   - name: Print current date
-       run: date
+    steps:
+      - name: Print welcome message
+        run: echo "Hello! This is my first GitHub Actions workflow."
+
+      - name: Print current date
+        run: date
+
     
